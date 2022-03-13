@@ -1,0 +1,83 @@
+{
+    "name": "Warrior Sekai #225",
+    "symbol": "WSSC",
+    "description": "Warrior Sekai, The Samurai Collection",
+    "seller_fee_basis_points": 0,
+    "image": "225.png",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Meiyo Forest V1"
+        },
+        {
+            "trait_type": "Glow",
+            "value": "None#99"
+        },
+        {
+            "trait_type": "Body",
+            "value": "Fox#100"
+        },
+        {
+            "trait_type": "Head",
+            "value": "White Mohawk#4"
+        },
+        {
+            "trait_type": "Footwear",
+            "value": "Warazori#23"
+        },
+        {
+            "trait_type": "Armour",
+            "value": "Light Armor#25"
+        },
+        {
+            "trait_type": "Eyes",
+            "value": "Black"
+        },
+        {
+            "trait_type": "Scar",
+            "value": "X#7"
+        },
+        {
+            "trait_type": "Facial",
+            "value": "Brown Goatee V2"
+        },
+        {
+            "trait_type": "Wakazashi",
+            "value": "None#70"
+        },
+        {
+            "trait_type": "Katana",
+            "value": "Uncommon"
+        },
+        {
+            "trait_type": "Weapon",
+            "value": "None#30"
+        },
+        {
+            "trait_type": "Accessory",
+            "value": "None#65"
+        },
+        {
+            "trait_type": "Personality",
+            "value": "Merchant"
+        }
+    ],
+    "properties": {
+        "creators": [
+            {
+                "address": "BhLffCJWuS8n4DBrck6y9dHd4SDJywX8B4wvjW3tLbeB",
+                "share": 100
+            }
+        ],
+        "files": [
+            {
+                "uri": "225.png",
+                "type": "image/png"
+            }
+        ]
+    },
+    "collection": {
+        "name": "Warrior Sekai",
+        "family": "Warrior Sekai"
+    }
+}

@@ -1,0 +1,174 @@
+{
+  "blockchain": "solana",
+  "standard": "metaplex",
+  "name": "Warrior Sekai",
+  "symbol": "WSSC",
+  "description": "Warrior Sekai, The Samurai Collection",
+  "fees": 0,
+  "creators": [{
+    "address": "BhLffCJWuS8n4DBrck6y9dHd4SDJywX8B4wvjW3tLbeB",
+    "share": 100
+  }],
+  "count": 728,
+  "offset": 0,
+  "layers": [{
+      "layer": "Background",
+      "rarities": {
+        "Blue.png": 0.22,
+        "Green.png": 0.18,
+        "Meiyo Forest V1.png": 0.08,
+        "Meiyo Forest V2.png": 0.1,
+        "Pink.png": 0.14,
+        "Purple.png": 0.12,
+        "Yellow.png": 0.16
+      }
+    }, {
+      "layer": "Glow",
+      "rarities": {
+        "None#99.png": 0.99,
+        "White#0.5.png": 0.005,
+        "Yellow#0.5.png": 0.005
+      }
+    },
+    {
+      "layer": "Body",
+      "rarities": {
+        "Fox#100.png": 1
+      }
+    }, {
+      "layer": "Head",
+      "rarities": {
+        "Black Mohawk#4.png": 0.08,
+        "Black Tied#5.png": 0.09,
+        "Blond Mohawk#4.png": 0.05,
+        "Blond Tied#5.png": 0.06,
+        "Brown Mohawk#4.png": 0.05,
+        "Brown Tied#5.png": 0.06,
+        "Kabuto V1#10.png": 0.12,
+        "Kabuto V2#10.png": 0.12,
+        "Legendary Kabuto Mask#2.png": 0.01,
+        "Legendary Kabuto#5.png": 0.04,
+        "None#37.png": 0.21,
+        "White Mohawk#4.png": 0.05,
+        "White Tied#5.png": 0.06
+      }
+    }, {
+      "layer": "Footwear",
+      "rarities": {
+        "Jika-Tabi#19.png": 0.19,
+        "None#21.png": 0.21,
+        "Waraji#24.png": 0.24,
+        "Warazori#23.png": 0.23,
+        "Wooden#13.png": 0.13
+      }
+    }, {
+      "layer": "Armour",
+      "rarities": {
+        "Commander Armor#7.5.png": 0.075,
+        "Commander Kimono#7.5.png": 0.075,
+        "Full Armor#25.png": 0.25,
+        "Heavy Armor#10.png": 0.1,
+        "Kimono Light Armor#15.png": 0.15,
+        "Kimono#10.png": 0.1,
+        "Light Armor#25.png": 0.25
+      }
+    }, {
+      "layer": "Eyes",
+      "rarities": {
+        "Black.png": 0.18,
+        "Blue.png": 0.1,
+        "Green.png": 0.15,
+        "Red.png": 0.07,
+        "White.png": 0.28,
+        "Yellow.png": 0.22
+      }
+    }, {
+      "layer": "Scar",
+      "rarities": {
+        "Across Face#15.png": 0.16,
+        "Below Eye#20.png": 0.23,
+        "Double#2.png": 0.03,
+        "Eye#9.png": 0.18,
+        "None#47.png": 0.3,
+        "X#7.png": 0.1
+      }
+    }, {
+      "layer": "Facial",
+      "rarities": {
+        "Black Goatee V1.png": 0.08,
+        "Black Goatee V2.png": 0.05,
+        "Black Mustache V1.png": 0.08,
+        "Black Mustache V2.png": 0.0475,
+        "Blond Goatee V1.png": 0.06,
+        "Blond Goatee V2.png": 0.0475,
+        "Blond Mustache V1.png": 0.06,
+        "Blond Mustache V2.png": 0.035,
+        "Brown Goatee V1.png": 0.07,
+        "Brown Goatee V2.png": 0.0575,
+        "Brown Mustache V1.png": 0.07,
+        "Brown Mustache V2.png": 0.045,
+        "Mask.png": 0.01,
+        "None.png": 0.195,
+        "White Goatee V1.png": 0.03,
+        "White Goatee V2.png": 0.0175,
+        "White Mustache V1.png": 0.03,
+        "White Mustache V2.png": 0.015
+      }
+    }, {
+      "layer": "Wakazashi",
+      "rarities": {
+        "Black#15.png": 0.15,
+        "None#70.png": 0.65,
+        "Yellow#15.png": 0.2
+      }
+    }, {
+      "layer": "Katana",
+      "rarities": {
+        "Common.png": 0.46,
+        "Epic.png": 0.12,
+        "Legendary.png": 0.02,
+        "Rare.png": 0.18,
+        "Uncommon.png": 0.22
+      }
+    }, {
+      "layer": "Weapon",
+      "rarities": {
+        "Naginata#25.png": 0.25,
+        "None#30.png": 0.3,
+        "Tanto Black#12.5.png": 0.125,
+        "Tanto Yellow#12.5.png": 0.125,
+        "Yumi#20.png": 0.2
+      }
+    }, {
+      "layer": "Accessory",
+      "rarities": {
+        "Grass#5.png": 0.02,
+        "Hyotan.png": 0.24,
+        "Keychain#5.png": 0.12,
+        "Pipe#5.png": 0.04,
+        "Sword Banner#10.png": 0.16,
+        "None#65.png": 0.42
+      }
+    }, {
+      "layer": "Personality",
+      "rarities": {
+        "Adventurer.png": 0.03,
+        "Advocate.png": 0.03,
+        "Architect.png": 0.1,
+        "Campaigner.png": 0.03,
+        "Commander.png": 0.05,
+        "Consul.png": 0.03,
+        "Coordinator.png": 0.1,
+        "Debater.png": 0.06,
+        "Defender.png": 0.04,
+        "Entertainer.png": 0.03,
+        "Logician.png": 0.1,
+        "Logistician.png": 0.06,
+        "Mediator.png": 0.03,
+        "Merchant.png": 0.2,
+        "Protagonist.png": 0.05,
+        "Virtuoso.png": 0.06
+      }
+    }
+  ]
+}

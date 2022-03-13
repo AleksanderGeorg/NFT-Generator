@@ -1,0 +1,83 @@
+{
+    "name": "Warrior Sekai #687",
+    "symbol": "WSSC",
+    "description": "Warrior Sekai, The Samurai Collection",
+    "seller_fee_basis_points": 0,
+    "image": "687.png",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Purple"
+        },
+        {
+            "trait_type": "Glow",
+            "value": "None#99"
+        },
+        {
+            "trait_type": "Body",
+            "value": "Fox#100"
+        },
+        {
+            "trait_type": "Head",
+            "value": "White Mohawk#4"
+        },
+        {
+            "trait_type": "Footwear",
+            "value": "Jika-Tabi#19"
+        },
+        {
+            "trait_type": "Armour",
+            "value": "Light Armor#25"
+        },
+        {
+            "trait_type": "Eyes",
+            "value": "Black"
+        },
+        {
+            "trait_type": "Scar",
+            "value": "Eye#9"
+        },
+        {
+            "trait_type": "Facial",
+            "value": "Brown Goatee V1"
+        },
+        {
+            "trait_type": "Wakazashi",
+            "value": "Black#15"
+        },
+        {
+            "trait_type": "Katana",
+            "value": "Common"
+        },
+        {
+            "trait_type": "Weapon",
+            "value": "Yumi#20"
+        },
+        {
+            "trait_type": "Accessory",
+            "value": "Hyotan"
+        },
+        {
+            "trait_type": "Personality",
+            "value": "Architect"
+        }
+    ],
+    "properties": {
+        "creators": [
+            {
+                "address": "BhLffCJWuS8n4DBrck6y9dHd4SDJywX8B4wvjW3tLbeB",
+                "share": 100
+            }
+        ],
+        "files": [
+            {
+                "uri": "687.png",
+                "type": "image/png"
+            }
+        ]
+    },
+    "collection": {
+        "name": "Warrior Sekai",
+        "family": "Warrior Sekai"
+    }
+}

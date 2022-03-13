@@ -1,0 +1,83 @@
+{
+    "name": "Warrior Sekai #514",
+    "symbol": "WSSC",
+    "description": "Warrior Sekai, The Samurai Collection",
+    "seller_fee_basis_points": 0,
+    "image": "514.png",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "Glow",
+            "value": "None#99"
+        },
+        {
+            "trait_type": "Body",
+            "value": "Fox#100"
+        },
+        {
+            "trait_type": "Head",
+            "value": "Kabuto V1#10"
+        },
+        {
+            "trait_type": "Footwear",
+            "value": "Wooden#13"
+        },
+        {
+            "trait_type": "Armour",
+            "value": "Kimono#10"
+        },
+        {
+            "trait_type": "Eyes",
+            "value": "Yellow"
+        },
+        {
+            "trait_type": "Scar",
+            "value": "Eye#9"
+        },
+        {
+            "trait_type": "Facial",
+            "value": "Black Goatee V2"
+        },
+        {
+            "trait_type": "Wakazashi",
+            "value": "None#70"
+        },
+        {
+            "trait_type": "Katana",
+            "value": "Common"
+        },
+        {
+            "trait_type": "Weapon",
+            "value": "None#30"
+        },
+        {
+            "trait_type": "Accessory",
+            "value": "None#65"
+        },
+        {
+            "trait_type": "Personality",
+            "value": "Mediator"
+        }
+    ],
+    "properties": {
+        "creators": [
+            {
+                "address": "BhLffCJWuS8n4DBrck6y9dHd4SDJywX8B4wvjW3tLbeB",
+                "share": 100
+            }
+        ],
+        "files": [
+            {
+                "uri": "514.png",
+                "type": "image/png"
+            }
+        ]
+    },
+    "collection": {
+        "name": "Warrior Sekai",
+        "family": "Warrior Sekai"
+    }
+}
