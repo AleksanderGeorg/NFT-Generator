@@ -6,7 +6,7 @@ try {
     console.log(`\u001b[1;31mYou have not set up config.json\u001b[0m`)
   } else {
     console.log(error)
-    console.log(`\u001b[1;31mUnknown error in config.json\u001b[0m`)
+    console.log(`\u001b[1;31mUnknown error with requiring config.json\u001b[0m`)
   }
 }
 
