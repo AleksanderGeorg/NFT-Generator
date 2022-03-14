@@ -1,5 +1,6 @@
 {
   "blockchains": [
-    "solana - metaplex"
+    "solana - metaplex",
+    "ethereum - erc721"
   ]
 }

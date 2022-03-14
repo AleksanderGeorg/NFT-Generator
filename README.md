@@ -12,3 +12,4 @@ Don't forget to `npm install` before you run the program first time!
 
 Currently supported (blockchain - standard)
 solana - metaplex
+ethereum - erc721

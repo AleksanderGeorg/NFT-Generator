@@ -1,0 +1,33 @@
+{
+  "blockchain": "ethereum",
+  "standard": "erc721",
+  "name": "Collection Name",
+  "description": "NFT collection description",
+  "url": "https://project-url",
+  "count": 10,
+  "offset": 0,
+  "layers": [{
+      "layer": "Background",
+      "rarities": {
+        "Black.png": 0.5,
+        "White.png": 0.5
+      }
+    }, {
+      "layer": "Body",
+      "rarities": {
+        "Small.png": 0.2,
+        "Medium.png": 0.3,
+        "Large.png": 0.5
+      }
+    },
+    {
+      "layer": "Head",
+      "rarities": {
+        "Cat.png": 0.6,
+        "Dog.png": 0.2,
+        "Mouse.png": 0.1,
+        "Sheep.png": 0.1
+      }
+    }
+  ]
+}
