@@ -7,11 +7,40 @@ exports.run = (config) => {
 }
 
 const checkConfig = (config, callback) => {
-  if (false) {
-    console.log(`\u001b[1;31mLayer ${0} rarities do not add up to 100% (1.0)\u001b[0m\nStopping generation ...`)
-    return
-  }
+  console.log('Checking config ...')
+  if (!checkRarityConfig(config) || !checkCreatorConfig(config)) return;
+  console.log('Config is valid ...')
   callback(config)
+}
+
+const checkRarityConfig = ({
+  layers
+}) => {
+  layers.forEach(layer => {
+    if (Object.values(layer.rarities).reduce((a, b) => a + b, 0).toPrecision(6) !== 1.0.toPrecision(6)) {
+      console.log(`\u001b[1;31mLayer ${layer.layer} rarities do not add up to 100% (1.0)\u001b[0m\nStopping generation ...`)
+      return false
+    }
+  })
+  return true
+}
+
+const checkCreatorConfig = ({
+  creators
+}) => {
+  let totalShare = 0
+  for (let i = 0; i < creators.length; i++) {
+    if (creators[i].address.length !== 44) {
+      console.log(`\u001b[1;31mCreator address ${creators[i].address} is not a valid Solana address\u001b[0m\nStopping generation ...`)
+      return false
+    }
+    totalShare += creators[i].share
+  }
+  if (totalShare.toPrecision(6) !== 100.0.toPrecision(6)) {
+    console.log(`\u001b[1;31mCreator shares do not add up to 100% (100)\u001b[0m\nStopping generation ...`)
+    return false
+  }
+  return true
 }
 
 const metaplex = ({

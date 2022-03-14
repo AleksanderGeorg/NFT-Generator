@@ -1,12 +1,12 @@
 {
   "name": "nft-generator",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0",
+  "description": "Simple NFT generator for various blockchains.",
   "main": "index.js",
   "scripts": {
     "generate": "node index.js"
   },
-  "author": "",
+  "author": "Aleksander Georg Kikas",
   "license": "ISC",
   "dependencies": {
     "sharp": "^0.30.2"
