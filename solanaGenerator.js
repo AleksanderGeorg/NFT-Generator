@@ -3,7 +3,7 @@ const sharp = require("sharp")
 
 exports.run = (config) => {
   if (config.standard === "metaplex") checkConfig(config, metaplex)
-  else console.log(`\u001b[1;31mStandard not implemented - ${config.standard}\u001b[0m\nStopping generation ...`)
+  else console.log(`\u001b[1;31mStandard not implemented - \u001b[1;33m${config.standard}\u001b[0m`)
 }
 
 const checkConfig = (config, callback) => {
@@ -16,13 +16,21 @@ const checkConfig = (config, callback) => {
 const checkRarityConfig = ({
   layers
 }) => {
+  let noError = true
   layers.forEach(layer => {
     if (Object.values(layer.rarities).reduce((a, b) => a + b, 0).toPrecision(6) !== 1.0.toPrecision(6)) {
-      console.log(`\u001b[1;31mLayer ${layer.layer} rarities do not add up to 100% (1.0)\u001b[0m\nStopping generation ...`)
-      return false
+      console.log(`\u001b[1;31mLayer rarities do not add up to 100% (1.0)\u001b[0m - \u001b[1;33m${layer.layer}\u001b[0m`)
+      noError = false
+    }
+    const layerFiles = Object.keys(layer.rarities)
+    for (let i = 0; i < layerFiles.length; i++) {
+      if (!fs.existsSync(`./assets/${layer.layer}/${layerFiles[i]}`)) {
+        console.log(`\u001b[1;31mLayer file does not exist under layer folder \u001b[1;34m${layer.layer}\u001b[1;31m > \u001b[1;33m${layerFiles[i]}\u001b[0m`)
+        noError = false
+      }
     }
   })
-  return true
+  return noError
 }
 
 const checkCreatorConfig = ({
@@ -31,13 +39,13 @@ const checkCreatorConfig = ({
   let totalShare = 0
   for (let i = 0; i < creators.length; i++) {
     if (creators[i].address.length !== 44) {
-      console.log(`\u001b[1;31mCreator address ${creators[i].address} is not a valid Solana address\u001b[0m\nStopping generation ...`)
+      console.log(`\u001b[1;31mCreator address is not a valid Solana address - \u001b[1;33m${creators[i].address}\u001b[0m`)
       return false
     }
     totalShare += creators[i].share
   }
   if (totalShare.toPrecision(6) !== 100.0.toPrecision(6)) {
-    console.log(`\u001b[1;31mCreator shares do not add up to 100% (100)\u001b[0m\nStopping generation ...`)
+    console.log(`\u001b[1;31mCreator shares do not add up to 100% (100)\u001b[0m`)
     return false
   }
   return true
@@ -113,7 +121,6 @@ const createImageFromLayers = (layers, fileName, fileType) => {
       input: `./assets/${layers[i]["trait_type"]}/${layers[i].value}.${fileType}`
     })
   }
-
   sharp(`./assets/${layers[0]["trait_type"]}/${layers[0].value}.${fileType}`)
     .composite(layerImages)
     .toFile(`./out/${fileName}.${fileType}`)
