@@ -1,8 +1,20 @@
-const config = require("./config.json")
+let config
+try {
+  config = require("./config.json")
+} catch (error) {
+  if (error.code === "MODULE_NOT_FOUND" && error.message.includes("Cannot find module './config.json'")) {
+    console.log(`\u001b[1;31mYou have not set up config.json\u001b[0m`)
+  } else {
+    console.log(error)
+    console.log(`\u001b[1;31mUnknown error in config.json\u001b[0m`)
+  }
+}
 
 try {
-  const generator = require(`./${config.blockchain}Generator.js`)
-  generator.run(config)
+  if (config != undefined) {
+    const generator = require(`./${config.blockchain}Generator.js`)
+    generator.run(config)
+  }
 } catch (error) {
   if (error.code === "MODULE_NOT_FOUND" && error.message.includes(`Cannot find module './${config.blockchain}Generator.js'`)) {
     const supported = require("./supported.json")
