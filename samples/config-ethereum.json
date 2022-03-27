@@ -6,6 +6,7 @@
   "url": "https://project-url",
   "count": 10,
   "offset": 0,
+  "metadataOnly": false,
   "layers": [{
       "layer": "Background",
       "rarities": {

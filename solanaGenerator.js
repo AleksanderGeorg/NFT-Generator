@@ -14,22 +14,32 @@ const checkConfig = (config, callback) => {
 }
 
 const checkRarityConfig = ({
-  layers
+  layers,
+  metadataOnly
 }) => {
   let noError = true
-  layers.forEach(layer => {
-    if (Object.values(layer.rarities).reduce((a, b) => a + b, 0).toPrecision(6) !== 1.0.toPrecision(6)) {
-      console.log(`\u001b[1;31mLayer rarities do not add up to 100% (1.0)\u001b[0m - \u001b[1;33m${layer.layer}\u001b[0m`)
-      noError = false
-    }
-    const layerFiles = Object.keys(layer.rarities)
-    for (let i = 0; i < layerFiles.length; i++) {
-      if (!fs.existsSync(`./assets/${layer.layer}/${layerFiles[i]}`)) {
-        console.log(`\u001b[1;31mLayer file does not exist under layer folder \u001b[1;34m${layer.layer}\u001b[1;31m > \u001b[1;33m${layerFiles[i]}\u001b[0m`)
+  if (metadataOnly) {
+    layers.forEach(layer => {
+      if (Object.keys(layer.rarities).length !== 1) {
+        console.log(`\u001b[1;31mMore than 1 layer rarity set for metadata only generation!\u001b[0m - \u001b[1;33m${layer.layer}\u001b[0m`)
         noError = false
       }
-    }
-  })
+    })
+  } else {
+    layers.forEach(layer => {
+      if (Object.values(layer.rarities).reduce((a, b) => a + b, 0).toPrecision(6) !== 1.0.toPrecision(6)) {
+        console.log(`\u001b[1;31mLayer rarities do not add up to 100% (1.0)\u001b[0m - \u001b[1;33m${layer.layer}\u001b[0m`)
+        noError = false
+      }
+      const layerFiles = Object.keys(layer.rarities)
+      for (let i = 0; i < layerFiles.length; i++) {
+        if (!fs.existsSync(`./assets/${layer.layer}/${layerFiles[i]}`)) {
+          console.log(`\u001b[1;31mLayer file does not exist under layer folder \u001b[1;34m${layer.layer}\u001b[1;31m > \u001b[1;33m${layerFiles[i]}\u001b[0m`)
+          noError = false
+        }
+      }
+    })
+  }
   return noError
 }
 
@@ -59,15 +69,16 @@ const metaplex = ({
   fees,
   creators,
   offset,
-  layers
+  layers,
+  metadataOnly
 }) => {
-  console.log(`Generating ${count} Solana NFTs ...`)
+  console.log(metadataOnly ? `Generating ${count} Solana NFT metadatas only ...` : `Generating ${count} Solana NFTs ...`)
   for (let i = offset; i < count + offset; i++) {
     const attributes = []
     layers.forEach(layer => {
       attributes.push({
         "trait_type": layer.layer,
-        "value": getRandomForLayer(layer.layer, layer.rarities)
+        "value": metadataOnly ? Object.keys(layer.rarities)[0] : getRandomForLayer(layer.layer, layer.rarities)
       })
     })
 
@@ -97,7 +108,7 @@ const metaplex = ({
         return
       }
       console.log(`Metadata generated for ${i}.png`)
-      createImageFromLayers(attributes, i, "png")
+      if (!metadataOnly) createImageFromLayers(attributes, i, "png")
     })
   }
 }
@@ -126,4 +137,8 @@ const createImageFromLayers = (layers, fileName, fileType) => {
     .toFile(`./out/${fileName}.${fileType}`)
 
   console.log(`Image generated for ${fileName}.${fileType}`)
+}
+
+const createMetadataOnly = () => {
+
 }

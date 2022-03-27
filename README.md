@@ -2,11 +2,15 @@ NFT Generator
 
 Simple NFT generator for various blockchains.
 
-How to use:
+How to use for generating:
 1. Set up config.json
 2. Import assets into folder "assets" (you can delete .gitkeep if you want)
 3. Run in console `npm run generate`
 4. Matadata and NFT images will be generated into folder "out"
+
+How to use for matching metadata with NFT images:
+1. Run in console `npm run check`
+2. The script will check for matching discrepancies between metadata and NFT files in "out" folder 
 
 Don't forget to `npm install` before you run the program first time!
 
