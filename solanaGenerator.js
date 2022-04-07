@@ -8,7 +8,7 @@ exports.run = (config) => {
 
 const checkConfig = (config, callback) => {
   console.log('Checking config ...')
-  if (!checkRarityConfig(config) || !checkCreatorConfig(config)) return;
+  if (!checkRarityConfig(config) || !checkCreatorConfig(config) || !checkRoyaltiesConfig(config)) return;
   console.log('Config is valid ...')
   callback(config)
 }
@@ -56,6 +56,16 @@ const checkCreatorConfig = ({
   }
   if (totalShare.toPrecision(6) !== 100.0.toPrecision(6)) {
     console.log(`\u001b[1;31mCreator shares do not add up to 100% (100)\u001b[0m`)
+    return false
+  }
+  return true
+}
+
+const checkRoyaltiesConfig = ({
+  fees
+}) => {
+  if (fees < 0 || fees > 10000) {
+    console.log(`\u001b[1;31mFees must be between 0 and 10000 (100 = 1%)\u001b[0m`)
     return false
   }
   return true
