@@ -5,7 +5,8 @@
   "main": "generate.js",
   "scripts": {
     "generate": "node generate.js",
-    "check": "node check.js"
+    "check": "node check.js",
+    "create-meta": "node create-meta.js"
   },
   "author": "Aleksander Georg Kikas",
   "license": "ISC",

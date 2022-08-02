@@ -1,0 +1,8 @@
+Background
+Red	25.00%
+Blue	25.00%
+Yellow	50.00%
+
+Body
+Big Body	24.50%
+Small Body 	75.50%

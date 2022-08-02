@@ -1,6 +1,12 @@
-out
-assets/*
-!assets/.gitkeep 
 node_modules
+
+assets/*
+!assets/.gitkeep
+
+out
+
 config.json
 *.config.json
+
+data.txt
+*.data.txt
