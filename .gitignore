@@ -5,8 +5,10 @@ assets/*
 
 out
 
+configs
 config.json
 *.config.json
 
+data
 data.txt
 *.data.txt
